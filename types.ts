@@ -5,17 +5,18 @@ export interface ProfileData {
   email: string;
 }
 
+export interface Education {
+  degree: string;
+  institution: string;
+  period: string;
+}
+
+// Fix: Add missing WorkExperience interface to resolve type error in Experience.tsx.
 export interface WorkExperience {
   role: string;
   company: string;
   period: string;
   description: string[];
-}
-
-export interface Education {
-  degree: string;
-  institution: string;
-  period: string;
 }
 
 export interface SocialLinks {
@@ -24,7 +25,6 @@ export interface SocialLinks {
   instagram?: string;
 }
 
-// FIX: Add Project interface. This type is imported and used in components/Portfolio.tsx and components/ProjectCard.tsx but was not defined.
 export interface Project {
   title: string;
   description: string;
@@ -33,8 +33,10 @@ export interface Project {
   liveDemoUrl: string;
 }
 
-// FIX: Add BlogPost interface. This type is imported and used in components/Blog.tsx but was not defined.
 export interface BlogPost {
+  slug: string;
   title: string;
   summary: string;
+  date: string;
+  content: string;
 }

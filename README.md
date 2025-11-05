@@ -49,5 +49,3 @@ To get the deployment working on your repository, you need to configure GitHub P
     ```
 
 After this initial setup, every push to the `main` branch will trigger the workflow, and your updated site will be live within a few minutes at `https://your-username.github.io/your-repo-name/`.
-
-[placeholder until it works l]
