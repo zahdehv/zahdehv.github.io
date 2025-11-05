@@ -3,10 +3,11 @@ import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Experience from './components/Experience';
+import Portfolio from './components/Portfolio';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 
-import { profileData, workExperience, education, skills, blogPosts, socialLinks } from './constants';
+import { profileData, workExperience, education, skills, blogPosts, socialLinks, projects } from './constants';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <Home name={profileData.name} title={profileData.title} socialLinks={socialLinks} />
         <About summary={profileData.summary} skills={skills} />
         <Experience workExperience={workExperience} education={education} />
+        <Portfolio projects={projects} />
         <Blog posts={blogPosts} />
         <Contact socialLinks={socialLinks} email={profileData.email} />
       </main>

@@ -1,4 +1,4 @@
-import type { ProfileData, WorkExperience, Education, SocialLinks, BlogPost } from './types';
+import type { ProfileData, WorkExperience, Education, SocialLinks, BlogPost, Project } from './types';
 
 export const profileData: ProfileData = {
   name: "zahdehv",
@@ -66,6 +66,30 @@ export const workExperience: WorkExperience[] = [
     company: "Course Project",
     period: "2021",
     description: ["Created a collectible card game that simulates a battle between two fantasy armies."],
+  }
+];
+
+export const projects: Project[] = [
+  {
+    title: "Obsidian Importer Plugin",
+    description: "A plugin for ObsidianMD that imports and processes audio, video, and documents into structured notes using Google's Generative AI.",
+    technologies: ["TypeScript", "Google Generative AI", "Obsidian API", "Vite"],
+    githubRepoUrl: "https://github.com/maritzuo",
+    liveDemoUrl: "#"
+  },
+  {
+    title: "AI Pokémon Battle Simulator",
+    description: "A battle simulator where Pokémon strategies evolve over multiple generations using ES-HyperNEAT evolutionary algorithms.",
+    technologies: ["Python", "AI", "NEAT-Python", "Pygame"],
+    githubRepoUrl: "https://github.com/maritzuo",
+    liveDemoUrl: "#"
+  },
+  {
+    title: "Moogle Search Engine",
+    description: "A custom document search engine built from scratch in C#, featuring file indexing, TF-IDF scoring for relevance, and custom query operators.",
+    technologies: ["C#", ".NET", "Data Structures", "Algorithms"],
+    githubRepoUrl: "https://github.com/maritzuo",
+    liveDemoUrl: "#"
   }
 ];
 
