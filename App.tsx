@@ -29,7 +29,7 @@ const App: React.FC = () => {
     // The app now always renders the main portfolio content.
     return (
       <>
-        <Home name={profileData.name} title={profileData.title} socialLinks={socialLinks} />
+        <Home name={profileData.name} title={profileData.title} socialLinks={socialLinks} email={profileData.email} />
         <About summary={profileData.summary} skills={skills} education={education} />
         <Portfolio projects={projects} />
         <Contact socialLinks={socialLinks} email={profileData.email} />
