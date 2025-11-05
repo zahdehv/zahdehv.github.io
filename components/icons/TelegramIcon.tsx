@@ -8,7 +8,7 @@ const TelegramIcon: React.FC<{ className?: string }> = ({ className }) => (
     className={className}
     aria-hidden="true"
   >
-    <path d="M22 2L2 9.5l7.5 2.5L12 22l2.5-7.5L22 2zm-3.5 3.5L10 13.5 8 12l10.5-6.5z" />
+    <path d="M22 2L2 9.5l7.5 2.5L12 22l2.5-7.5L22 2z" />
   </svg>
 );
 

@@ -33,10 +33,10 @@ export interface Project {
   liveDemoUrl: string;
 }
 
-export interface BlogPost {
-  slug: string;
-  title: string;
-  summary: string;
-  date: string;
-  content: string;
-}
+// export interface BlogPost {
+//   slug: string;
+//   title: string;
+//   summary: string;
+//   date: string;
+//   content: string;
+// }
