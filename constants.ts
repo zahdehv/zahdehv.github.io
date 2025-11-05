@@ -8,7 +8,7 @@ export const profileData: ProfileData = {
 };
 
 export const socialLinks: SocialLinks = {
-  github: "https://github.com/maritzuo",
+  github: "https://github.com/zahdehv",
   telegram: "https://t.me/zahdehv",
   instagram: "https://instagram.com/zahdehv",
 };
