@@ -33,10 +33,11 @@ export interface Project {
   liveDemoUrl: string;
 }
 
-// export interface BlogPost {
-//   slug: string;
-//   title: string;
-//   summary: string;
-//   date: string;
-//   content: string;
-// }
+// Fix: Uncommented BlogPost interface to fix type errors in blog-related components.
+export interface BlogPost {
+  slug: string;
+  title: string;
+  summary: string;
+  date: string;
+  content: string;
+}

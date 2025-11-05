@@ -1,6 +1,6 @@
 import React from 'react';
 import type { SocialLinks } from '../types';
-import { GitHubIcon, EmailIcon, TelegramIcon, InstagramIcon } from './icons';
+import { GitHubIcon, EmailIcon, InstagramIcon } from './icons';
 
 interface HomeProps {
   name: string;
@@ -26,11 +26,6 @@ const Home: React.FC<HomeProps> = ({ name, title, socialLinks }) => {
         <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-sky-400 transition-colors">
           <GitHubIcon className="w-8 h-8" />
         </a>
-        {socialLinks.telegram && (
-          <a href={socialLinks.telegram} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-sky-400 transition-colors">
-            <TelegramIcon className="w-8 h-8" />
-          </a>
-        )}
         {socialLinks.instagram && (
           <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-sky-400 transition-colors">
             <InstagramIcon className="w-8 h-8" />
@@ -40,12 +35,21 @@ const Home: React.FC<HomeProps> = ({ name, title, socialLinks }) => {
           <EmailIcon className="w-8 h-8" />
         </a>
       </div>
-      <a
-        href="#contact"
-        className="mt-12 px-8 py-3 bg-sky-500 text-white font-semibold rounded-lg hover:bg-sky-600 transition-all transform hover:scale-105"
-      >
-        Get In Touch
-      </a>
+      {socialLinks.telegram && (
+        <a 
+          href={socialLinks.telegram} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="mt-12 block group"
+          aria-label="Contact me on Telegram"
+        >
+          <img 
+            src="/telegram.png" 
+            alt="Telegram QR Code" 
+            className="w-40 h-40 rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105" 
+          />
+        </a>
+      )}
     </section>
   );
 };

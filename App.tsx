@@ -4,10 +4,12 @@ import Home from './components/Home';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-// import BlogIndexPage from './components/Blog';
-// import BlogPostPage from './components/BlogPostPage';
+// Fix: Uncommented blog imports to re-enable blog functionality.
+import BlogIndexPage from './components/Blog';
+import BlogPostPage from './components/BlogPostPage';
 
-import { profileData, education, skills, /* blogPosts, */ socialLinks, projects } from './constants';
+// Fix: Uncommented blogPosts import to re-enable blog functionality.
+import { profileData, education, skills, blogPosts, socialLinks, projects } from './constants';
 
 const App: React.FC = () => {
   const [hash, setHash] = useState(window.location.hash);
@@ -22,19 +24,20 @@ const App: React.FC = () => {
   }, []);
 
   const renderContent = () => {
-    // const path = hash.replace(/^#\/?/, '');
+    // Fix: Uncommented blog routing logic to re-enable blog functionality.
+    const path = hash.replace(/^#\/?/, '');
 
-    // if (path.startsWith('blog/')) {
-    //   const slug = path.replace('blog/', '');
-    //   const post = blogPosts.find(p => p.slug === slug);
-    //   if (post) {
-    //     return <BlogPostPage post={post} />;
-    //   }
-    // }
+    if (path.startsWith('blog/')) {
+      const slug = path.replace('blog/', '');
+      const post = blogPosts.find(p => p.slug === slug);
+      if (post) {
+        return <BlogPostPage post={post} />;
+      }
+    }
     
-    // if (path === 'blog') {
-    //   return <BlogIndexPage posts={blogPosts} />;
-    // }
+    if (path === 'blog') {
+      return <BlogIndexPage posts={blogPosts} />;
+    }
 
     // Default to main portfolio page
     return (

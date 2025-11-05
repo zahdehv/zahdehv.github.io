@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
+// Fix: Uncommented blog nav link to re-enable blog functionality.
 const navLinks = [
   { href: '/#home', label: 'Home' },
   { href: '/#about', label: 'About' },
   { href: '/#portfolio', label: 'Projects' },
-  // { href: '/#/blog', label: 'Blog' },
+  { href: '/#/blog', label: 'Blog' },
   { href: '/#contact', label: 'Contact' },
 ];
 
