@@ -26,7 +26,7 @@ const Contact: React.FC<ContactProps> = ({ socialLinks, email }) => {
             <img 
               src="/telegram.png" 
               alt="Telegram QR Code" 
-              className="w-40 h-40 rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105" 
+              className="w-40 h-40 rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105 object-contain" 
             />
           </a>
         )}

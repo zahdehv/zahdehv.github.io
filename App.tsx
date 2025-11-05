@@ -4,42 +4,29 @@ import Home from './components/Home';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-// Fix: Uncommented blog imports to re-enable blog functionality.
-import BlogIndexPage from './components/Blog';
-import BlogPostPage from './components/BlogPostPage';
 
-// Fix: Uncommented blogPosts import to re-enable blog functionality.
-import { profileData, education, skills, blogPosts, socialLinks, projects } from './constants';
+import { profileData, education, skills, socialLinks, projects } from './constants';
+
 
 const App: React.FC = () => {
   const [hash, setHash] = useState(window.location.hash);
 
   useEffect(() => {
     const handleHashChange = () => {
-      window.scrollTo(0, 0);
+      // When the hash is empty or just '#', it means we are on the main page.
+      // We don't want to scroll to top for in-page navigation.
+      if (!hash.startsWith('#/')) {
+        window.scrollTo(0, 0);
+      }
       setHash(window.location.hash);
     };
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+  }, [hash]);
 
   const renderContent = () => {
-    // Fix: Uncommented blog routing logic to re-enable blog functionality.
-    const path = hash.replace(/^#\/?/, '');
-
-    if (path.startsWith('blog/')) {
-      const slug = path.replace('blog/', '');
-      const post = blogPosts.find(p => p.slug === slug);
-      if (post) {
-        return <BlogPostPage post={post} />;
-      }
-    }
-    
-    if (path === 'blog') {
-      return <BlogIndexPage posts={blogPosts} />;
-    }
-
-    // Default to main portfolio page
+    // All routing logic for the blog has been removed.
+    // The app now always renders the main portfolio content.
     return (
       <>
         <Home name={profileData.name} title={profileData.title} socialLinks={socialLinks} />

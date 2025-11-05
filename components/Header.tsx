@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-// Fix: Uncommented blog nav link to re-enable blog functionality.
 const navLinks = [
   { href: '/#home', label: 'Home' },
   { href: '/#about', label: 'About' },
   { href: '/#portfolio', label: 'Projects' },
-  { href: '/#/blog', label: 'Blog' },
   { href: '/#contact', label: 'Contact' },
 ];
 
@@ -30,7 +28,7 @@ const Header: React.FC = () => {
         e.preventDefault();
         document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
       }
-      // If on a different page (like blog), the default href will handle navigation
+      // If on a different page, the default href will handle navigation
     }
   };
 

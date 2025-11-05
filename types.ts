@@ -11,7 +11,6 @@ export interface Education {
   period: string;
 }
 
-// Fix: Add missing WorkExperience interface to resolve type error in Experience.tsx.
 export interface WorkExperience {
   role: string;
   company: string;
@@ -33,11 +32,11 @@ export interface Project {
   liveDemoUrl: string;
 }
 
-// Fix: Uncommented BlogPost interface to fix type errors in blog-related components.
+// FIX: Add BlogPost interface to resolve compilation errors in blog-related components.
 export interface BlogPost {
   slug: string;
   title: string;
-  summary: string;
   date: string;
+  summary: string;
   content: string;
 }
