@@ -10,7 +10,7 @@ import { profileData, education, skills, socialLinks, projects } from './constan
 const App: React.FC = () => {
   return (
     <div className="min-h-screen">
-      <main className="container mx-auto px-6 md:px-12 lg:px-20 pt-16 md:pt-24 pb-16">
+      <main className="container mx-auto px-6 md:px-12 lg:px-20">
         <Home name={profileData.name} title={profileData.title} socialLinks={socialLinks} email={profileData.email} />
         <About summary={profileData.summary} skills={skills} education={education} />
         <Portfolio projects={projects} githubUrl={socialLinks.github} />
