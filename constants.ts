@@ -3,8 +3,8 @@ import type { ProfileData, Education, SocialLinks, Project } from './types';
 
 export const profileData: ProfileData = {
   name: "zahdehv",
-  title: "Developer",
-  summary: "Software developer with a foundation in AI, backend systems, and algorithm design. Passionate about creating practical tools and exploring concepts from distributed systems to machine learning and game development.",
+  title: "Developer | Computer Scientist",
+  summary: "Software developer with a foundation in AI, backend systems, and algorithm design. Passionate about creating practical tools and exploring concepts from machine learning and game development.",
   email: "zahdehv@gmail.com"
 };
 
