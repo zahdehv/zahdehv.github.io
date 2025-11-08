@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
+import React from 'react';
 import Home from './components/Home';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
@@ -9,39 +8,13 @@ import { profileData, education, skills, socialLinks, projects } from './constan
 
 
 const App: React.FC = () => {
-  const [hash, setHash] = useState(window.location.hash);
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      // When the hash is empty or just '#', it means we are on the main page.
-      // We don't want to scroll to top for in-page navigation.
-      if (!hash.startsWith('#/')) {
-        window.scrollTo(0, 0);
-      }
-      setHash(window.location.hash);
-    };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, [hash]);
-
-  const renderContent = () => {
-    // All routing logic for the blog has been removed.
-    // The app now always renders the main portfolio content.
-    return (
-      <>
-        <Home name={profileData.name} title={profileData.title} socialLinks={socialLinks} email={profileData.email} />
-        <About summary={profileData.summary} skills={skills} education={education} />
-        <Portfolio projects={projects} />
-        <Contact socialLinks={socialLinks} email={profileData.email} />
-      </>
-    );
-  };
-
   return (
     <div className="min-h-screen">
-      <Header />
-      <main className="container mx-auto px-6 md:px-12 lg:px-20 py-24">
-        {renderContent()}
+      <main className="container mx-auto px-6 md:px-12 lg:px-20 pt-16 md:pt-24 pb-16">
+        <Home name={profileData.name} title={profileData.title} socialLinks={socialLinks} email={profileData.email} />
+        <About summary={profileData.summary} skills={skills} education={education} />
+        <Portfolio projects={projects} githubUrl={socialLinks.github} />
+        <Contact socialLinks={socialLinks} email={profileData.email} />
       </main>
     </div>
   );

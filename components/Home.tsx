@@ -11,7 +11,7 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({ name, title, socialLinks, email }) => {
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center -mt-20">
+    <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center">
       <div className="space-y-4">
         <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
           {name}
